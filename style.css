@@ -1,0 +1,36 @@
+
+.box {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.watcher {
+    width: 80%;
+    height: 20%;
+    background-color: brown;
+}
+
+.time-unit {
+    width: 40px;
+    height: auto;
+    background-color: red;
+}
+
+.time-unit__digits {
+    font-size: 4rem;
+}
+
+.time-unit__label {
+    font-size: 2rem;
+}

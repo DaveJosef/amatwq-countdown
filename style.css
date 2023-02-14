@@ -32,6 +32,8 @@ body {
     height: 100vh;
     background-color: aqua;
     animation: bg 10s infinite ease-in-out;
+    background-position: center;
+    background-size: cover;
 }
 
 .watcher {
@@ -74,29 +76,31 @@ body {
 @keyframes bg {
     0%, 100% {
         background-image: url('./assets/a.jpg');
+        box-shadow: 4px 4px 800px inset rgba(0, 0, 0, 1);
     }
     10% {
         box-shadow: 4px 4px 100px inset rgba(0, 0, 0, 1);
     }
-    20% {
-        box-shadow: 4px 4px 1000px inset rgba(0, 0, 0, 1);
-    }
     30% {
         background-image: url('./assets/b.jpg');
+        box-shadow: 4px 4px 800px inset rgba(0, 0, 0, 1);
     }
     40% {
         box-shadow: 4px 4px 100px inset rgba(0, 0, 0, 1);
     }
-    50% {
-        box-shadow: 4px 4px 1000px inset rgba(0, 0, 0, 1);
-    }
     60% {
         background-image: url('./assets/c.jpg');
+        box-shadow: 4px 4px 800px inset rgba(0, 0, 0, 1);
     }
     70% {
         box-shadow: 4px 4px 100px inset rgba(0, 0, 0, 1);
     }
-    90% {
-        box-shadow: 4px 4px 1000px inset rgba(0, 0, 0, 1);
+}
+
+@media screen and (max-width: 732px) {
+
+    .watcher {
+        width: 100%;
     }
+
 }

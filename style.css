@@ -30,7 +30,7 @@ body {
 .page {
     width: 100vw;
     height: 100vh;
-    background-color: aqua;
+    background-color: white;
     animation: bg 10s infinite ease-in-out;
     background-position: center;
     background-size: cover;

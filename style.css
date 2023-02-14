@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Insideman";
+  src: url('./assets/Insideman.otf');
+}
+
+:root {
+    font-family: 'Insideman', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
 
 .box {
     display: flex;
@@ -9,22 +22,31 @@
     padding: 0;
 }
 
+.box-digits {
+    height: 5rem;
+    overflow: hidden;
+}
+
 .page {
     width: 100vw;
     height: 100vh;
     background-color: aqua;
+    animation: bg 10s infinite ease-in-out;
 }
 
 .watcher {
-    width: 80%;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 700px;
     height: 20%;
-    background-color: brown;
+    background-color: white;
+    opacity: .8;
+    border-radius: .5rem;
+    backdrop-filter: blur(10px);
 }
 
 .time-unit {
-    width: 40px;
-    height: auto;
-    background-color: red;
+    height: 100%;
 }
 
 .time-unit__digits {
@@ -32,5 +54,49 @@
 }
 
 .time-unit__label {
-    font-size: 2rem;
+    font-size: 1rem;
+}
+
+.scroll-up {
+    animation-name: scroll-up;
+    animation-duration: 0.5s;
+}
+
+@keyframes scroll-up {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-4rem);
+    }
+}
+
+@keyframes bg {
+    0%, 100% {
+        background-image: url('./assets/a.jpg');
+    }
+    10% {
+        box-shadow: 4px 4px 100px inset rgba(0, 0, 0, 1);
+    }
+    20% {
+        box-shadow: 4px 4px 1000px inset rgba(0, 0, 0, 1);
+    }
+    30% {
+        background-image: url('./assets/b.jpg');
+    }
+    40% {
+        box-shadow: 4px 4px 100px inset rgba(0, 0, 0, 1);
+    }
+    50% {
+        box-shadow: 4px 4px 1000px inset rgba(0, 0, 0, 1);
+    }
+    60% {
+        background-image: url('./assets/c.jpg');
+    }
+    70% {
+        box-shadow: 4px 4px 100px inset rgba(0, 0, 0, 1);
+    }
+    90% {
+        box-shadow: 4px 4px 1000px inset rgba(0, 0, 0, 1);
+    }
 }

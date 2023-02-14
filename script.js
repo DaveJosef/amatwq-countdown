@@ -135,6 +135,8 @@ setInterval(() => {
 
     const timeRemaining = deadline - now;
 
+    if (timeRemaining < 0) return;
+
     scrollDigits(timeRemaining);
 
 }, 1000);
